@@ -1,23 +1,99 @@
-<!-- Task 4: Multipage Navigation -->
-<!-- Objective: Learn how to create navigation between multiple pages. -->
-
 <nav>
     <ul>
         <li><a href="page1.html">Page 1</a></li>
         <li><a href="page2.html">Page 2</a></li>
         <li><a href="page3.html">Page 3</a></li>
+        <li><a href="page4.html">Page 4</a></li>
+        <a href="#" class="previous page">&laquo; Previous</a>
+        <a href="#" class="next page">Next &raquo;</a>
     </ul>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+            <a href="page1.html">Page 1</a>
+            <a href="page2.html">Page 2</a>
+            <a href="page3.html">Page 3</a>
+            <a href="page4.html">Page 4</a>
+        </div>
+    </li>
+
+    <!-- Menambahkan form pencarian untuk memudahkan pengguna mencari konten -->
+    <form action="/search" method="get">
+        <input type="text" name="query" placeholder="Search..." aria-label="Search">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Menyediakan link untuk tutorial web scraping -->
+    <ul>
+        <li><a href="https://www.example.com/web-scraping-tutorial" target="_blank">Learn Web Scraping</a></li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2025 Tembung, Deli Serdang Regency, North Sumatra. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
 </nav>
 
-<!-- To-Do:
-1. Create a new HTML page with some content and add it to the navigation.
-2. Change the text of one of the navigation links to “Back to Homepage”.
-3. Add a "previous" and "next" button for page navigation (using anchor tags).
-4. Add a dropdown menu in the navigation for mobile users.
-5. Create a footer navigation that links to privacy policy and terms of service.
-6. Implement "active" class on the current page in the navigation list.
-7. Add a search bar inside the navigation that filters content across pages.
-8. Make the navigation bar sticky so it stays at the top as you scroll.
-9. Include a link in the navigation for an external resource on web scraping.
-10. Style the navigation links with CSS to make them more user-friendly.
--->
+<style>
+    /* Menandai halaman aktif dengan gaya khusus */
+    .active {
+        font-weight: bold;
+        color: #007bff; /* Warna biru untuk menandakan halaman aktif */
+    }
+
+    /* Styling untuk form pencarian, agar tetap tampil rapi */
+    form {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    input[type="text"] {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Membuat navigasi tetap di atas saat halaman digulir */
+    nav {
+        position: sticky;
+        top: 0;
+        background-color: #fff; /* Warna latar belakang agar tetap terlihat jelas */
+        z-index: 1000; /* Agar tetap berada di atas elemen lain */
+    }
+
+    /* Styling untuk tautan navigasi */
+    nav a {
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        color: #333; /* Warna teks default */
+    }
+
+    /* Efek saat kursor diarahkan ke tautan */
+    nav a:hover {
+        background-color: #007bff; /* Warna latar belakang saat hover */
+        color: white; /* Warna teks saat hover */
+        border-radius: 5px; /* Menambahkan sudut melengkung saat hover */
+    }
+
+    /* Styling untuk menampilkan link eksternal di navigasi */
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+</style>

@@ -5,24 +5,87 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
         }
+
         h1 {
-            color: #4CAF50;
+            color: #3498db;
+            font-family: 'Verdana', sans-serif;
         }
+
         p {
-            font-size: 16px;
+            font-size: 18px;
         }
+
         .important {
             font-weight: bold;
             color: red;
+            border: 2px solid #ff0000;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .button {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Introduction to CSS</h1>
-    <p>This is a basic example of CSS styling.</p>
-    <p class="important">This text is styled with the 'important' class.</p>
+    <div class="container">
+        <h1>Introduction to CSS</h1>
+        <p>This is a basic example of CSS styling.</p>
+        <p class="important">This text is styled with the 'important' class.</p>
+        <button class="button">Click Me</button>
+    </div>
+
+    <div class="flex-container">
+        <p>This content is centered using Flexbox.</p>
+    </div>
 </body>
+
 
 <!-- To-Do:
 1. Add a background color to the body.

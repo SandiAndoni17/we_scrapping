@@ -1,27 +1,110 @@
 <!-- Task 3: HTML Table -->
 <!-- Objective: Learn how to structure data in a table. -->
+<!DOCTYPE html>
+<html>
+    
+<head>
 
-<table border="1">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>John Doe</td>
-            <td>29</td>
-            <td>johndoe@example.com</td>
-        </tr>
-        <tr>
-            <td>Jane Smith</td>
-            <td>34</td>
-            <td>janesmith@example.com</td>
-        </tr>
-    </tbody>
-</table>
+    <!-- CSS style to set alternate table 
+            row using color -->
+    <style>
+        table {
+            border-collapse: dashed;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: Lightgreen;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <caption>Sukaramai Citizens Data</caption><br><br>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Job Tittle</th>
+                    
+        
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>29</td>
+                    <td><a href="profile_johndoe.html">johndoe@example.com</a></td>
+                    <td>Engineer</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>34</td>
+                    <td><a href="profile_janesmith.html">janesmith@example.com</a></td>
+                    <td>Doctor</td>
+                </tr>
+                <tr>
+                    <td>Joni Asadoma</td>
+                    <td>54</td>
+                    <td><a href="profile_joniasadoma.html">joniA@gmail.com</a></td>
+                    <td>Postman</td>
+                </tr>
+                <tr>
+                    <td>Joo Taslim</td>
+                    <td>37</td>
+                    <td><a href="profile_jootaslim.html">joot@gmail.com</a></td>
+                    <td>Actor</td>
+                </tr>
+
+                
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>154</td>
+                </tr>       
+            </tfoot>
+           
+        </table>
+
+    <script>
+        // Function for search filter
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];  // Search by the name column
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+    </body>
+
+</html>
+
 
 <!-- To-Do:
 1. Add two more rows to the table with different data.

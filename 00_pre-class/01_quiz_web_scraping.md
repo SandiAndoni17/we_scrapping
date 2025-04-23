@@ -7,7 +7,8 @@ By the end of this exercise, you will have a clear roadmap for starting your jou
 ## Questions
 1. **Find 3 to 5 freelance platforms that you can find.g**
 
-   Upwork, Fiver, Fastwork, and ..
+   Upwork, Fiver, Fastwork, and facebook.com,,,,
+
 
 2. **On Upwork, find 3 to 5 job postings related to "data extraction" or "web scraping." Analyze the job descriptions and identify the top 5 tags or keywords commonly used.**
 
